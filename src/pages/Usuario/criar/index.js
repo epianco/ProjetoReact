@@ -102,7 +102,7 @@ class CriarUsuario extends Component {
     };
 
     handleSubmit = event => {
-        fetch("http://localhost:3003/sistema/usuarios", {
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/usuarios`, { // http://localhost:3003/
             method:"post",
             body: JSON.stringify(this.state.usuario),
             headers: {
