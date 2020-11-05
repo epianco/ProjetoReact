@@ -100,7 +100,7 @@ class EditarUsuario extends Component {
     handleSubmit = event => {
         const { id } = this.state.usuario;
 
-        fetch(`${process.env.REACT_APP_AzzPI_URL}/sistema/usuarios/${id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/usuarios/${id}`, {
             method: "put",
             body: JSON.stringify(this.state.usuario),
             headers: {
